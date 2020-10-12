@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Header from "components/Header";
-import CurrentBox from "components/CurrentTemp";
+import CurrentTemp from "components/CurrentTemp";
 import FutureTemperatures from "components/FutureTemperatures";
 
 const Wrapper = styled.main`
@@ -14,7 +14,7 @@ const Wrapper = styled.main`
 const MainView = () => (
   <Wrapper>
     <Header />
-    <CurrentBox />
+    <CurrentTemp />
     <FutureTemperatures />
   </Wrapper>
 );
