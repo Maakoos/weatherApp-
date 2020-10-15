@@ -23,7 +23,7 @@ function App() {
   const fetchData = async (city) => {
     setShowLoader(true);
     const response = await axios(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${API_KEY}&lang=pl`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${API_KEY}&lang=en`
     );
 
     setCurrentWeather(response.data);
@@ -33,7 +33,7 @@ function App() {
     const { lon, lat } = coords;
 
     const futureDaysData = await axios(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid=${API_KEY}&units=metric&lang=pl`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid=${API_KEY}&units=metric&lang=en`
     );
 
     setFutureWeather(futureDaysData.data);
@@ -57,7 +57,7 @@ function App() {
   };
 
   return (
-    <HashRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <BackgroundBox />
       <div className="App">
         {showLoader ? <LoadingBox showLoader={showLoader} /> : null}
