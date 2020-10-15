@@ -11,6 +11,10 @@ const TempBox = styled.li`
 const Icon = styled.img`
   margin: 5px 0;
   width: 35px;
+
+  @media (min-width: 1200px) {
+    width: 60px;
+  }
 `;
 
 const Sup = styled.sup`
