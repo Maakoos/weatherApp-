@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import axios from "axios";
 
 import GlobalStyle from "styles/GlobalStyle";
@@ -57,7 +57,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <HashRouter>
       <BackgroundBox />
       <div className="App">
         {showLoader ? <LoadingBox showLoader={showLoader} /> : null}
@@ -69,7 +69,7 @@ function App() {
           </Switch>
         </AppContext.Provider>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
