@@ -1,4 +1,5 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 import AppContext from "context/AppContext";
@@ -27,8 +28,23 @@ const Date = styled.p`
 
 const Button = styled.button`
   width: 50px;
-  background-color: transparent;
+  height: 50px;
   border: none;
+  cursor: pointer;
+`;
+
+const MoreBtn = styled(Button)`
+  background: url(${more});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
+
+const SearchBtn = styled(Button)`
+  background: url(${add});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 const Form = styled.form`
@@ -63,11 +79,15 @@ const SearchInput = styled.input`
 const Header = () => {
   const [searchInputIsVisible, setSearchInputIsVisible] = useState(false);
 
-  const context = useContext(AppContext);
+  const {
+    name,
+    searchInputValue,
+    setSearchInputValue,
+    fetchData,
+    setShowLoader,
+  } = useContext(AppContext);
 
   const searchInputRef = useRef();
-
-  const { name, searchInputValue, setSearchInputValue, fetchData } = context;
 
   const options = {
     weekday: "short",
@@ -87,14 +107,25 @@ const Header = () => {
     fetchData(searchInputValue);
     setSearchInputIsVisible(false);
     setSearchInputValue("");
+    setTimeout(() => setShowLoader(false), 2000);
   };
 
-  const handleOnClick = () => {
+  const handleOnClick = () =>
     setSearchInputIsVisible((prevValue) => !prevValue);
+
+  const closeInputOnBlurEvent = () => {
+    setSearchInputIsVisible(false);
+    setSearchInputValue("");
   };
 
   useEffect(() => {
-    searchInputRef.current.focus();
+    const inputRefCopy = searchInputRef.current;
+
+    inputRefCopy.focus();
+    inputRefCopy.addEventListener("blur", closeInputOnBlurEvent);
+
+    return () =>
+      inputRefCopy.removeEventListener("blur", closeInputOnBlurEvent);
   });
 
   return (
@@ -111,16 +142,12 @@ const Header = () => {
           ref={searchInputRef}
         />
       </Form>
-      <Button>
-        <img src={more} alt="" />
-      </Button>
+      <MoreBtn as={Link} to="/details" />
       <CityBox>
         <CityName>{name}</CityName>
         <Date>{currentDate}</Date>
       </CityBox>
-      <Button onClick={handleOnClick}>
-        <img src={add} alt="" />
-      </Button>
+      <SearchBtn onClick={handleOnClick} />
     </Wrapper>
   );
 };
