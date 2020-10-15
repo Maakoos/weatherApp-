@@ -13,6 +13,10 @@ const NameOfDay = styled.p`
 
 const Icon = styled.img`
   width: 35px;
+
+  @media (min-width: 1200px) {
+    width: 60px;
+  }
 `;
 
 const MaxTemp = styled.p`
@@ -32,7 +36,7 @@ const NextDay = ({ dt, temp: { day, night }, weather }) => {
     weekday: "short",
   };
   const dayName = new window.Date(dt * 1000).toLocaleDateString(
-    "pl-PL",
+    "en-GB",
     options
   );
 
