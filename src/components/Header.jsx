@@ -98,7 +98,7 @@ const Header = () => {
     minute: "numeric",
   };
 
-  const currentDate = new window.Date().toLocaleDateString("pl-PL", options);
+  const currentDate = new window.Date().toLocaleDateString("en-GB", options);
 
   const handleOnChange = (e) => setSearchInputValue(e.target.value);
 
