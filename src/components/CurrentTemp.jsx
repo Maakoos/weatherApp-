@@ -37,6 +37,7 @@ const MinMaxTempBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 20px;
 `;
 
 const MaxTemp = styled.p`
