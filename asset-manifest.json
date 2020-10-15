@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.js": "/weatherApp-/static/js/main.4a21585c.chunk.js",
+    "main.js.map": "/weatherApp-/static/js/main.4a21585c.chunk.js.map",
+    "runtime-main.js": "/weatherApp-/static/js/runtime-main.8e307250.js",
+    "runtime-main.js.map": "/weatherApp-/static/js/runtime-main.8e307250.js.map",
+    "static/js/2.e16d0cd0.chunk.js": "/weatherApp-/static/js/2.e16d0cd0.chunk.js",
+    "static/js/2.e16d0cd0.chunk.js.map": "/weatherApp-/static/js/2.e16d0cd0.chunk.js.map",
+    "index.html": "/weatherApp-/index.html",
+    "precache-manifest.31e2042da17d7c69464c335816f3c3c9.js": "/weatherApp-/precache-manifest.31e2042da17d7c69464c335816f3c3c9.js",
+    "service-worker.js": "/weatherApp-/service-worker.js",
+    "static/js/2.e16d0cd0.chunk.js.LICENSE.txt": "/weatherApp-/static/js/2.e16d0cd0.chunk.js.LICENSE.txt",
+    "static/media/add.svg": "/weatherApp-/static/media/add.a04023ca.svg",
+    "static/media/arrow.svg": "/weatherApp-/static/media/arrow.f804e153.svg",
+    "static/media/clearSky.jpg": "/weatherApp-/static/media/clearSky.3391e379.jpg",
+    "static/media/humidity.svg": "/weatherApp-/static/media/humidity.1d77789d.svg",
+    "static/media/moon.svg": "/weatherApp-/static/media/moon.de3d78fe.svg",
+    "static/media/more.svg": "/weatherApp-/static/media/more.12e343ac.svg",
+    "static/media/pressure.svg": "/weatherApp-/static/media/pressure.f8564b45.svg",
+    "static/media/sun.svg": "/weatherApp-/static/media/sun.eb086941.svg",
+    "static/media/thermometer.svg": "/weatherApp-/static/media/thermometer.b9a22414.svg",
+    "static/media/undo.svg": "/weatherApp-/static/media/undo.1318b577.svg",
+    "static/media/visibility.svg": "/weatherApp-/static/media/visibility.e2b2e8bf.svg",
+    "static/media/wind.svg": "/weatherApp-/static/media/wind.3d12baf0.svg",
+    "static/media/wind_speed.svg": "/weatherApp-/static/media/wind_speed.63256fc7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e307250.js",
+    "static/js/2.e16d0cd0.chunk.js",
+    "static/js/main.4a21585c.chunk.js"
+  ]
+}
