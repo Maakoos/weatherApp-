@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const TempBox = styled.div`
+const TempBox = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;

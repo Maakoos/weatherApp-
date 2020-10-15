@@ -5,7 +5,7 @@ import AppContext from "context/AppContext";
 
 import BoxForHourTemperature from "components/BoxForHourTemperature";
 
-const Wrapper = styled.div`
+const Wrapper = styled.ul`
   display: flex;
   justify-content: space-around;
 `;

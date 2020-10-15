@@ -10,7 +10,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
   padding: 0 30px;
+  max-width: 400px;
 `;
 
 const TempBox = styled.div`
