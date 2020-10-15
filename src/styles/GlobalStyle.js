@@ -9,13 +9,29 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .App {
+    position: relative;
     padding: 15px;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(180deg, rgba(81,164,219,1) 0%, rgba(115,186,225,1) 100%);
-    /* background-color: #000; */
     color: #fff;
     font-family: 'Open Sans', sans-serif;
+    
+    @media (min-width: 1200px) {
+      min-height: calc(100vh - 100px);
+      max-width: 500px;
+      border-radius: 10px;
+    }
+  }
+
+  #root {
+    display: flex;
+    justify-content: center;
+    
+
+    @media (min-width: 1200px) {
+      padding: 50px 0;
+    }
   }
 `;
 
